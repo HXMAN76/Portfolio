@@ -1,12 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from "@/components/Navbar";
+import { HeroSection } from "@/sections/HeroSection";
+import { AboutSection } from "@/sections/AboutSection";
+import { ProjectsSection } from "@/sections/ProjectsSection";
+import { SkillsSection } from "@/sections/SkillsSection";
+import { ExperienceSection } from "@/sections/ExperienceSection";
+import { ContactSection } from "@/sections/ContactSection";
+import { FooterSection } from "@/sections/FooterSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Scanline Effect Overlay */}
+      <div className="fixed inset-0 pointer-events-none z-50 scanline opacity-30" />
+      
+      {/* Navigation */}
+      <Navbar />
+      
+      {/* Main Content */}
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ContactSection />
+      </main>
+      
+      {/* Footer */}
+      <FooterSection />
     </div>
   );
 };
